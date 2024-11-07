@@ -1,3 +1,42 @@
+body{
+    background-color: #F7F7F7;
+    font-family: "outfit";
+}
+
+.index_row {
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+#foodimage {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    width: 90%;
+    height: 600px;
+    background-image: url("images/foodsection.jpg");
+    border-radius: 20px;
+}
+
+.top_row_logo{
+    width: auto;
+    height: 50px;
+    text-align: center;
+}
+
+.container{
+    background-color: var(--container-bg-color);
+    margin: 1%;
+    width: 431px;
+    height: 600px;
+    float: left;
+    border-radius: 20px;
+}
+
+.container:hover{
+    width: 440px;
+}
 * {
     margin: 0;
     padding: 0;
