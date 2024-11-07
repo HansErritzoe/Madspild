@@ -164,11 +164,11 @@ footer .right-section li a {
     text-align: left;
     font-size: 20px;
     text-decoration: none;
-    padding-top: 3px;
+    padding-top: 1px;
     color: white;
 }
 #social-media-links{
-    padding-top: 2px;
+    padding-top: 1px;
 }
 
 footer .right-section li a:hover {
