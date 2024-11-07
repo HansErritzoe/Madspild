@@ -19,7 +19,7 @@ body{
     border-radius: 20px;
 }
 
-.top_row_logo{
+#top_row_logo{
     width: auto;
     height: 50px;
     text-align: center;
@@ -28,15 +28,23 @@ body{
 .container{
     background-color: var(--container-bg-color);
     margin: 1%;
-    width: 431px;
+    width: 433px;
     height: 600px;
     float: left;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
 .container:hover{
-    width: 440px;
+    transform: scale(1.03);
 }
+
+#container_box{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4.5%;
+}
+
 * {
     margin: 0;
     padding: 0;
