@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    height: 50px;
+    background-color: #fdfdfd;
+    padding: 0;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #9ad59f;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+header .left-section nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+header .left-section nav ul li {
+    align-content: center;
+    margin-right: 30px;
+}
+#header-logo-li{
+    margin-right: 18px;
+}
+#header-logo{
+    margin-top: 3px;
+    height: 30px;
+    width: auto;
+}
+header .left-section nav ul li a {
+    font-size: 23px;
+    color: #9ad59f;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+}
+header .left-section nav ul li a:hover {
+    text-underline-position: under;
+    text-decoration: underline;
+}
+header .right-section {
+    margin-right: 12px;
+}
+header .right-section #login-button {
+    display: inline-block;
+    width: 100px;
+    padding: 3px 15px;
+    background-color: #9AD59F;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 23px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+header .right-section #login-button:hover {
+    background-color: #7cb481;
+
+}
+
+/* Header Styling End */
