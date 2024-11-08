@@ -2,6 +2,8 @@ body{
     background-color: #F7F7F7;
     font-family: "outfit";
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .index_row {
@@ -48,6 +50,7 @@ body{
     width: 100%;
     margin: 0 0.5%;
     box-sizing: border-box;
+    color: white;
 }
 
 .link-button:hover {
