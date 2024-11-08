@@ -1,6 +1,7 @@
 body{
     background-color: #F7F7F7;
     font-family: "outfit";
+    overflow-x: hidden;
 }
 
 .index_row {
@@ -25,24 +26,32 @@ body{
     text-align: center;
 }
 
-.container{
-    background-color: var(--container-bg-color);
-    margin: 1%;
-    width: 433px;
-    height: 600px;
-    float: left;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
-.container:hover{
-    transform: scale(1.03);
-}
-
-#container_box{
+#container_box {
     display: flex;
     justify-content: space-between;
     margin: 0 4.5%;
+    width: calc(100% - 9%);
+    box-sizing: border-box;
+}
+
+#container_box a {
+    width: 22%;
+    box-sizing: border-box;
+}
+
+.link-button {
+    background-color: var(--container-bg-color);
+    height: 600px;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.3s ease;
+    width: 100%;
+    margin: 0 0.5%;
+    box-sizing: border-box;
+}
+
+.link-button:hover {
+    transform: scale(1.03);
 }
 
 * {
