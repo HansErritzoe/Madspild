@@ -76,6 +76,70 @@ body{
     box-sizing: border-box;
 }
 
+/* Company page */
+
+#company_cover_photo {
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 300px;
+    background-image: url("images/VirksomhedCoverBillede.jpg");
+    background-position: bottom ;
+    background-size: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.split_line {
+    width: 95%;
+    height: 1px;
+    background-color: #ccc;
+    border-radius: 1px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Centers the line */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.split_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2%;
+}
+.split_section p a {
+    color: black;
+}
+.split_section p a:hover {
+    color: darkblue;
+}
+
+.bread-text {
+    padding-left: 1.6%;
+    margin-top: 0.5%;
+    padding-top: 0;
+    font-size: 19px;
+    width: 65%;
+    line-height: 1.05;
+
+}
+
+.company_page_photos {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 0.5;
+    margin-top: 1%;
+}
+
+
+
+/* Company page END */
+
 /* Header Styling */
 header {
     height: 50px;
