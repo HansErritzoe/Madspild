@@ -1,3 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 body{
     background-color: #F7F7F7;
     font-family: "outfit";
@@ -110,7 +121,7 @@ header .left-section nav ul li a:hover {
 header .right-section {
     margin-right: 12px;
 }
-header .right-section #login-button {
+#login-button {
     display: inline-block;
     width: 100px;
     padding: 3px 15px;
@@ -123,7 +134,91 @@ header .right-section #login-button {
     font-size: 23px;
     transition: background-color 0.3s ease; /* Smooth background color transition */
 }
-header .right-section #login-button:hover {
+#login-button:hover {
     background-color: #7cb481;
 }
 /* Header Styling End */
+
+/* Footer Styling */
+footer {
+    background-color: #9ad59f;
+    color: white;
+    padding-left: 10px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+}
+footer .left-section {
+    position: relative;
+    bottom: 25px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+footer .left-section p {
+    font-family: "Outfit", sans-serif;
+    text-align: left;
+    font-size: 20px;
+}
+footer .left-section ul {
+    list-style-type: none;
+}
+footer .right-section {
+    position: relative;
+    bottom: 12px;
+}
+
+footer .right-section ul {
+    padding: 2px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
+footer .right-section li a {
+    font-family: "Outfit", sans-serif;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 1px;
+    color: white;
+}
+#social-media-links{
+    padding-top: 1px;
+}
+
+footer .right-section li a:hover {
+    text-decoration: underline;
+}
+
+footer .right-section li p {
+    font-family: "Outfit", sans-serif;
+    text-align: left;
+    font-size: 20px;
+}
+#contact {
+    text-decoration: underline;
+    text-underline-position: under;
+    font-size: 24px;
+}
+
+#facebook-logo {
+    height: 30px;
+    width: auto;
+    position: relative;
+    top: 8px;
+    left: 3px;
+}
+
+#instagram-logo {
+    height: 30px;
+    width: auto;
+    position: relative;
+    top: 9px;
+    left: 1px;
+}
+
+/* Footer Styling End */
