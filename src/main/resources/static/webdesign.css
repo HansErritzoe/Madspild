@@ -5,14 +5,13 @@ html, body {
     flex-direction: column;
 }
 
+main {
+    flex: 1;
+}
+
 body{
     background-color: #F7F7F7;
     font-family: "outfit";
-}
-
-main {
-    flex: 1;
-    padding: 20px;
 }
 
 .index_row {
