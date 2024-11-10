@@ -19,6 +19,7 @@ body{
     flex-direction: column;
 }
 
+/* Index Styling */
 .index_row {
     margin-left: 5%;
     margin-right: 5%;
@@ -35,6 +36,16 @@ body{
     border-radius: 20px;
 }
 
+#top_row_box {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    width: 90%;
+    height: 600px;
+    background-color: #9ad59f;
+    border-radius: 20px;
+}
 #top_row_logo{
     width: auto;
     height: 50px;
@@ -69,6 +80,7 @@ body{
 .link-button:hover {
     transform: scale(1.03);
 }
+/* Index Styling End*/
 
 * {
     margin: 0;
