@@ -53,6 +53,17 @@ public class HomeController {
         return "home/createLogin";
     }
 
+    @GetMapping("/userInfoPage")
+    public String userInfoPage(HttpSession session, Model model){
+        User loggedInUser = (User) session.getAttribute("loggedInUser");
+        if (loggedInUser != null) {
+            model.addAttribute("loggedInUser", loggedInUser);
+        } else {
+            model.addAttribute("loggedInUser", null);
+        }
+        return "home/userInfoPage";
+    }
+
     @PostMapping("/createLogin")
     public String createLogin(@ModelAttribute User p, Model model){
         if(!userService.doesUserExists(p)){ //if user doesnt exist, add user
