@@ -36,11 +36,18 @@
             <h2>Opret bruger</h2>
         </div>
         <div>
-            <form>
-                <input type="text" placeholder="Brugernavn">
-                <input type="password" placeholder="Password">
+            <form action="/createLogin" method="post">
+                <input type="text" name="username" placeholder="Brugernavn" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Opret bruger</button>
             </form>
+        </div>
+        <!-- Display error message or success message if it exists in the model -->
+        <div th:if="${errorMessage}" class="error" th:text="${errorMessage}"></div>
+        <div th:if="${successMessage}" class="success_message" th:text="${successMessage}"></div>
+        <!-- Display link to login page if user creation was successful -->
+        <div th:if="${successMessage}" id="hidden_login_button">
+            <a href="/loginPage"> <button type="button">Gå til login </button> </a>
         </div>
     </div>
 </main>
