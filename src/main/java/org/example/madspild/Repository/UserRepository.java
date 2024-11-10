@@ -37,7 +37,7 @@ public class UserRepository {
 
 
     //returns true if user with @param username and @param password exists in db
-    public boolean validateUserNameWithPassword(String username, String password){
+    public boolean validateUsernameWithPassword(String username, String password){
         String sql = "SELECT COUNT(*) FROM users WHERE username = ? AND password = ?";
         Integer count = template.queryForObject(sql, Integer.class, username, password);
         return count != null && count > 0;

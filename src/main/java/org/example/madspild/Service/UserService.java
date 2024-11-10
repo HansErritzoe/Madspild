@@ -21,4 +21,13 @@ public class UserService {
         return userRepository.doesUserExist(p.getUsername());
     }
 
+    public boolean validateLoginInfo(String username, String password){
+        return userRepository.validateUsernameWithPassword(username,password);
+    }
+
+    //returns user based on username, check if exists first!
+    public User getUserByUsername(String username){
+        return userRepository.findUserByUserName(username);
+    }
+
 }

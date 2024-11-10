@@ -24,8 +24,11 @@
             </ul>
         </nav>
     </div>
-    <div class="right-section">
-        <a href="/loginPage" id="login-button">Login</a>
+    <div th:unless="${session.loggedInUser}" class="right-section">
+        <a href="/loginPage" class="login-button">Login</a>
+    </div>
+    <div th:if="${session.loggedInUser}" class="right-section">
+        <a href="/loginPage" class="login-button">Profil</a>
     </div>
 </header>
 <!-- Header End -->

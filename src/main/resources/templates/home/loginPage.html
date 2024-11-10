@@ -24,28 +24,42 @@
             </ul>
         </nav>
     </div>
-    <div class="right-section">
-        <a href="/loginPage" id="login-button">Login</a>
+    <div th:unless="${session.loggedInUser}" class="right-section">
+        <a href="/loginPage" class="login-button">Login</a>
+    </div>
+    <div th:if="${session.loggedInUser}" class="right-section">
+        <a href="/loginPage" class="login-button">Profil</a>
     </div>
 </header>
 <!-- Header End -->
 <!-- Main content -->
 <main style="display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
     <div class="login_container">
-        <div>
+        <div th:unless="${session.loggedInUser}" >
             <h2>Login</h2>
         </div>
-        <div>
-            <form>
-            <input type="text" placeholder="Brugernavn">
-            <input type="password" placeholder="Password">
+        <div th:if="${session.loggedInUser} != null and ${successMessage} == null"  >
+            <h3> Du er allerede logget ind. </h3>
+        </div>
+        <div th:unless="${session.loggedInUser}">
+            <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Brugernavn" required>
+            <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
             </form>
         </div>
-        <div id="forgot_password">
+        <!-- Display error message or success message if it exists in the model -->
+        <div th:if="${errorMessage}" class="error" th:text="${errorMessage}"></div>
+        <div th:if="${successMessage}" class="success_message" th:text="${successMessage}"></div>
+        <!-- Display link to login page if user creation was successful -->
+        <div id="login_success_buttons" th:if="${session.loggedInUser}" >
+            <a href="/userInfoPage"> <button type="button">Din profil</button></a>
+            <a href="/events"> <button type="button">Opret events</button></a>
+        </div>
+        <div th:unless="${session.loggedInUser}" id="forgot_password">
             <a href="#">Glemt password?</a>
         </div>
-        <div id="createUser">
+        <div th:unless="${session.loggedInUser}" id="createUser">
             <p>Ny her? </p>
             <a href="/createLogin">
                 <button>Opret bruger</button>

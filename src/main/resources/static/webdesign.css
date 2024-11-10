@@ -199,9 +199,9 @@ header .left-section nav ul li a:hover {
 header .right-section {
     margin-right: 12px;
 }
-#login-button {
+header .login-button {
     display: inline-block;
-    width: 100px;
+
     padding: 3px 15px;
     background-color: #9AD59F;
     color: white;
@@ -212,7 +212,7 @@ header .right-section {
     font-size: 23px;
     transition: background-color 0.3s ease; /* Smooth background color transition */
 }
-#login-button:hover {
+header .login-button:hover {
     background-color: #7cb481;
 }
 /* Header Styling End */
@@ -233,6 +233,13 @@ header .right-section {
 .login_container h2 {
     font-size: 40px;
     text-align: left;
+    margin-bottom: 2%;
+}
+
+.login_container h3 {
+    font-size: 30px;
+    color: #9ad59f;
+    text-align: center;
     margin-bottom: 2%;
 }
 
@@ -321,6 +328,14 @@ header .right-section {
 
 #hidden_login_button button {
     background-color: #2a76b4;
+}
+
+#login_success_buttons {
+    margin: 5%;
+}
+
+#login_success_buttons button {
+    margin: 5%;
 }
 
 /* Login page END */
