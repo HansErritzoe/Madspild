@@ -31,6 +31,11 @@ public class HomeController {
         return "home/events";
     }
 
+    @GetMapping("/loginPage")
+    public String loginPage(){
+        return "home/loginPage";
+    }
+
     @GetMapping("/createLogin")
     public String createLogin(){
         return "home/createLogin";

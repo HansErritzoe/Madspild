@@ -3,7 +3,7 @@
 <head>
     <script src="http://localhost:35729/livereload.js"></script>
     <meta charset="UTF-8">
-    <title>Opret bruger</title>
+    <title>Login</title>
     <link rel="stylesheet" href="webdesign.css">
 </head>
 <body>
@@ -33,14 +33,23 @@
 <main style="display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
     <div class="login_container">
         <div>
-            <h2>Opret bruger</h2>
+            <h2>Login</h2>
         </div>
         <div>
             <form>
-                <input type="text" placeholder="Brugernavn">
-                <input type="password" placeholder="Password">
-                <button type="submit">Opret bruger</button>
+            <input type="text" placeholder="Brugernavn">
+            <input type="password" placeholder="Password">
+            <button type="submit">Login</button>
             </form>
+        </div>
+        <div id="forgot_password">
+            <a href="#">Glemt password?</a>
+        </div>
+        <div id="createUser">
+            <p>Ny her? </p>
+            <a href="/createLogin">
+                <button>Opret bruger</button>
+            </a>
         </div>
     </div>
 </main>
@@ -67,6 +76,5 @@
     </div>
 </footer>
 <!-- Footer End -->
-
 </body>
 </html>
