@@ -53,6 +53,8 @@ public class HomeController {
         return "home/createLogin";
     }
 
+
+    //displays page with userinfo (gets the User object from the session and adds it to the model)
     @GetMapping("/userInfoPage")
     public String userInfoPage(HttpSession session, Model model){
         User loggedInUser = (User) session.getAttribute("loggedInUser");
@@ -64,18 +66,20 @@ public class HomeController {
         return "home/userInfoPage";
     }
 
+    //method to handle when user attempts to create an account(login)
     @PostMapping("/createLogin")
     public String createLogin(@ModelAttribute User p, Model model){
         if(!userService.doesUserExists(p)){ //if user doesnt exist, add user
             userService.addUser(p);
             model.addAttribute("successMessage","Success! Du er nu oprettet og kan logge ind");
-            return "home/createLogin"; //TODO add proper page/handle properly
+            return "home/createLogin";
         } else {
             model.addAttribute("errorMessage", "Dette brugernavn er optaget");
             return "home/createLogin";
         }
     }
 
+    //method to handle when user attempts to login
     @PostMapping("/login")
     public String login(Model model, HttpSession session, @RequestParam String username, @RequestParam String password){
         //check if user exists
@@ -92,8 +96,9 @@ public class HomeController {
 
     //deletes session data when user clicks logout and redirects to loginPage
     @PostMapping("/logout")
-    public String logout(HttpSession session){
+    public String logout(HttpSession session, Model model){
         session.invalidate(); //delete session data
-        return "redirect:/loginPage";
+        model.addAttribute("successMessage","Du er nu logget ud");
+        return "home/loginPage";
     }
 }
