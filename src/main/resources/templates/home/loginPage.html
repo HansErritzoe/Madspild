@@ -50,7 +50,7 @@
         </div>
         <!-- Display error message or success message if it exists in the model -->
         <div th:if="${errorMessage}" class="error" th:text="${errorMessage}"></div>
-        <div th:if="${successMessage}" class="success_message" th:text="${successMessage}"></div>
+        <div th:if="${successMessage}" class="success_message" th:utext="${successMessage}"></div>
         <!-- Display link to login page if user creation was successful -->
         <div id="login_success_buttons" th:if="${session.loggedInUser}" >
             <a href="/userInfoPage"> <button type="button">Din profil</button></a>

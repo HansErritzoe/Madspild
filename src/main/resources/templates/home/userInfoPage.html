@@ -11,12 +11,12 @@
             margin-top: 1%;
         }
         h1 {
-            font-size: 70px;
+            font-size: 60px;
             margin-bottom: 1%;
         }
         p {
             margin-left: 1%;
-            font-size: 30px;
+            font-size: 22px;
         }
         span {
             color: #2a76b4;
@@ -53,7 +53,7 @@
 <main>
     <h1> Min Profil </h1>
     <p th:if="${loggedInUser != null}">
-        Brugernavn:  <span th:text="${loggedInUser.username}">Guest</span>
+        Brugernavn:  <span th:text="${loggedInUser.username}"></span>
     </p>
     <p th:if="${session.loggedInUser == null}">
         Du er ikke logget ind.
@@ -64,6 +64,11 @@
     <p>
         <br> Antal Events deltaged i: 0
     </p>
+    <div th:unless="${session.loggedInUser == null}" class="logout_button">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Log ud</button>
+        </form>
+    </div>
 </main>
 <!-- Main content End -->
 <!-- Footer -->

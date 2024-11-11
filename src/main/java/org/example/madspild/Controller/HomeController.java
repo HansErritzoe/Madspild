@@ -71,22 +71,29 @@ public class HomeController {
             model.addAttribute("successMessage","Success! Du er nu oprettet og kan logge ind");
             return "home/createLogin"; //TODO add proper page/handle properly
         } else {
-            model.addAttribute("errorMessage", "Dette brugernavn er optaget - prøv igen");
+            model.addAttribute("errorMessage", "Dette brugernavn er optaget");
             return "home/createLogin";
         }
     }
 
     @PostMapping("/login")
     public String login(Model model, HttpSession session, @RequestParam String username, @RequestParam String password){
-        //if user exists
+        //check if user exists
         if(userService.validateLoginInfo(username,password)){
             User user = userService.getUserByUsername(username);
             session.setAttribute("loggedInUser", user); //add user to session
-            model.addAttribute("successMessage","Success! Du er nu logget ind");
+            model.addAttribute("successMessage","Success!<br> Du er nu logget ind");
             return "home/loginPage";
         } else {
-            model.addAttribute("errorMessage", "Forkert brugernavn eller password - prøv igen");
+            model.addAttribute("errorMessage", "Forkert brugernavn eller password");
             return "home/loginPage";
         }
+    }
+
+    //deletes session data when user clicks logout and redirects to loginPage
+    @PostMapping("/logout")
+    public String logout(HttpSession session){
+        session.invalidate(); //delete session data
+        return "redirect:/loginPage";
     }
 }
