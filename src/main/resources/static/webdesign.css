@@ -77,6 +77,7 @@ body{
     margin: 0 0.5%;
     box-sizing: border-box;
     color: white;
+    font-size: 200%;
 }
 
 .link-button:hover {
